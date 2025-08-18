@@ -6,7 +6,7 @@ public class foutteenththtask{
 
 	public static int getfactorila (int num){
 			int factorial = 1;
-			for (int count = num ; count < 1;count--) {factorial *= count;}
+			for (int count = num ; count > 1;count--)factorial *= count;
 			return factorial;
 		}
 
