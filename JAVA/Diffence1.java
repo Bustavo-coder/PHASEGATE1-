@@ -40,7 +40,7 @@ public class Diffence1{
 	public static int [] getDecryption(int [] userPattern){
 			for (int index = 0; index < userPattern.length;index++){
 					System.out.print(userPattern[index]);
-				userPattern[index] = (userPattern[index] + 7)/10;
+				userPattern[index] = (userPattern[index] + 7) % 10;
 				}
 				return userPattern;
 			}
