@@ -8,31 +8,43 @@ public class Diffence1{
 					System.out.println("Enter The Password");
 					password[index] = input.nextInt();
 						}
-				int [] storeSwap = swapPassword(password);
-				System.out.println(getEncryption(storeSwap));
-				}
+				int [] swapped = swapPassword(password);
+				int [] encrypted = getEncryption(swapped);
+				System.out.println(Arrays.toString(encrypted));
 
-	public static String getEncryption(int [] userPassword){
-			String sum = "";
-			for (int index = 0; index < userPassword.length;index++){
-				int value = userPassword[index];
-				 value = (value + 7) % 10;
-				sum += value;
-
-				}
+				int [] encytPass = encrypted;
+				int [] decryption =  getDecryption(encytPass);
+				//decryption =  swapPassword(decryption);
+				System.out.println(Arrays.toString(decryption));
 				
-				return sum;
-			}
+				}
 
-		public static int [] swapPassword(int [] userPassword){
+		
+		public static int [] swapPassword(int [] passwordArray){
 			for(int index = 0; index < 2;index++){
-				int store = userPassword[index];
-				userPassword[index] = userPassword[index + 2];
-				userPassword[index + 2] = store;
+				int store = passwordArray[index];
+				passwordArray[index] = passwordArray[index + 2];
+				passwordArray[index + 2] = store;
 			
 						}
-				return userPassword;
+				return passwordArray;
 
 				}
+		
+	public static int [] getEncryption(int [] userPassword){
+			for (int index = 0; index < userPassword.length;index++){
+				userPassword[index] = (userPassword[index] + 7) % 10;
+				}
+				return userPassword;
+			}
+	public static int [] getDecryption(int [] userPattern){
+			for (int index = 0; index < userPattern.length;index++){
+					System.out.print(userPattern[index]);
+				userPattern[index] = (userPattern[index] + 7)/10;
+				}
+				return userPattern;
+			}
+		
+		
 
 	}
