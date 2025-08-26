@@ -121,6 +121,8 @@ storeReponse = []
 arrayOfResponse = displayQuestionandStoreResponse(listOfQustions)// storing the response in an array
 
 console.log(`Hello ${userName} You selected`)
+
+personality = ""
 for (let counter = 0;counter < 4;counter++){
 		optionA = 0 ; optionB = 0
 	for (let index = counter; index < listOfQustions.length; index+=4){
@@ -131,5 +133,19 @@ for (let counter = 0;counter < 4;counter++){
 		console.log(`Number Of A : ${optionA}`)
 		console.log(`Number Of B : ${optionB}`)
 
+		if(counter == 0)letter1 = personality+= getPersonality(['E','I'])
+		if(counter == 1)letter2 = personality+= getPersonality(['S','N'])
+		if(counter == 2)letter3 = personality+= getPersonality(['T','F'])
+		if(counter == 3)letter3 = personality+= getPersonality(['J','P'])
 	}
+
+
+function getPersonality(array){
+	let letter
+	if(optionA > optionB ) letter = array[0]
+	else letter = array[1]
+	return letter
+}
+
+console.log(`Your Personality is ${personality}`)
 
