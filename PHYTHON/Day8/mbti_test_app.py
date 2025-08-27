@@ -132,11 +132,100 @@ def dislay_personlity_type_and_userChoice(list_questions):
 		if count == 3 : personality += get_personality([option_A,option_B,'J','P'])
 	return personality
 
+LIST_OF_PERSONALITIES = {
+	'INTJ' : """Who is the Architect personality type?
+	INTJ (Architect) is a personality type with the Introverted, Intuitive, Thinking, and Judging traits. 
+	These thoughtful tacticians love perfecting the details of life, applying creativity and rationality to everything they do. 
+	Their inner world is often a private, complex one. Thought constitutes the greatness of man. 
+	Man is a reed, the feeblest thing in nature, but he is a thinking reed.Their Minds are never at rest, 
+	these personalities may sometimes struggle to find people who can keep up with their nonstop analysis of everything around them.
+ 	But when they do find like-minded individuals who appreciate their intensity and depth of thought, 
+	INTJs form profound and intellectually stimulating relationships that they deeply treasure""",
+
+	'INTP' : """Who is the Logician personality type?
+	INTP (Logician) is a personality type with the Introverted, Intuitive, Thinking, and Prospecting traits. 
+	These flexible thinkers enjoy taking an unconventional approach to many aspects of life. 
+	They often seek out unlikely paths, mixing willingness to experiment with personal creativity.""",
+
+	'ENTJ' : """Who is the Commander personality type?
+	ENTJ (Commander) is a personality type with the Extraverted, Intuitive, Thinking, and Judging traits.
+	They are decisive people who love momentum and accomplishment.They gather information to construct 
+	their creative visions but rarely hesitate for long before acting on them.""",
+	
+	'ENTP' : """Who is the Debater personality type?
+	ENTP (Debater) is a personality type with the Extraverted, Intuitive, Thinking, and Prospecting traits. 
+	They tend to be bold and creative, deconstructing and rebuilding ideas with great mental agility. 
+	They pursue their goals vigorously despite any resistance they might encounter.""",
+
+	'INFJ' : """Who is the Advocate personality type?
+	INFJ (Advocate) is a personality type with the Introverted, Intuitive, Feeling, and Judging traits.
+	They tend to approach life with deep thoughtfulness and imagination.Their inner vision, personal values, 
+	and a quiet, principled version of humanism guide them in all things.""",
+
+	'INFP' : """Who is the Mediator personality type?
+	INFP (Mediator) is a personality type with the Introverted, Intuitive, Feeling, and Prospecting traits.
+	These rare personality types tend to be quiet, open-minded, and imaginative,
+	and they apply a caring and creative approach to everything they do.""",
+
+	'ENFJ' : """Who is the Protagonist personality type?
+	ENFJ (Protagonist) is a personality type with the Extraverted, Intuitive, Feeling, and Judging traits. 
+	These warm, forthright types love helping others, and they tend to have strong ideas and values. 
+	They back their perspective with the creative energy to achieve their goals.""",
+
+	'ENFP' : """Who is the Campaigner personality type?
+	ENFP (Campaigner) is a personality type with the Extraverted, Intuitive, Feeling, and Prospecting traits. 
+	These people tend to embrace big ideas and actions that reflect their sense of hope and goodwill toward others. 
+	Their vibrant energy can flow in many directions.""",
+		
+	'ISTJ' :"""Who is the Logistician personality type?
+	ISTJ (Logistician) is a personality type with the Introverted, Observant, Thinking, and Judging traits.
+	These people tend to be reserved yet willful, with a rational outlook on life. 
+	They compose their actions carefully and carry them out with methodical purpose.""",
+	
+	'ISFJ' :"""Who is the Defender personality type?
+	ISFJ (Defender) is a personality type with the Introverted, Observant, Feeling, and Judging traits. 
+	These people tend to be warm and unassuming in their own steady way. 
+	They’re efficient and responsible, giving careful attention to practical details in their daily lives""",
+
+	'ESTJ' : """Who is the Executive personality type?
+	ESTJ (Executive) is a personality type with the Extraverted, Observant, Thinking, and Judging traits.
+	They possess great fortitude, emphatically following their own sensible judgment.
+	They often serve as a stabilizing force among others, 
+	able to offer solid direction amid adversity.""",
+
+	'ESFJ' :"""Who is the Consul personality type?
+	ESFJ (Consul) is a personality type with the Extraverted, Observant, Feeling, and Judging traits. 
+	They are attentive and people-focused, and they enjoy taking part in their social community. 
+	Their achievements are guided by decisive values, and they willingly offer guidance to others""",
+
+	'ISTP' :"""Who is the Virtuoso personality type?
+	ISTP (Virtuoso) is a personality type with the Introverted, Observant, Thinking, and Prospecting traits. 
+	They tend to have an individualistic mindset, pursuing goals without needing much external connection. 
+	They engage in life with inquisitiveness and personal skill, varying their approach as needed.""",
+
+
+	'ISFP' : """Who is the Adventurer personality type?
+	ISFP (Adventurer) is a personality type with the Introverted, Observant, Feeling, and Prospecting traits. 
+	They tend to have open minds, approaching life, new experiences, and people with grounded warmth. 
+	Their ability to stay in the moment helps them uncover exciting potentials.""",
+	
+	'ESTP' : """Who is the Entrepreneur personality type?
+	ESTP (Entrepreneur) is a personality type with the Extraverted, Observant, Thinking, and Prospecting traits. 
+	They tend to be energetic and action-oriented, deftly navigating whatever is in front of them. 
+	They love uncovering life’s opportunities, whether socializing with others or in more personal pursuits.""",
+
+	'ESFP' :"""Who is the Entertainer personality type?
+	ESFP (Entertainer) is a personality type with the Extraverted, Observant, Feeling, and Prospecting traits. 
+	These people love vibrant experiences, engaging in life eagerly and taking pleasure in discovering the unknown.
+	They can be very social, often encouraging others into shared activities.""",	
+			}
+
 
 user_name = get_user_input('What is your Name\n')
 
 display_queston_return_response(LIST_OF_QUESIONS)
 print(f"Hello {user_name} you Selected")
-
 store_personality = dislay_personlity_type_and_userChoice(LIST_OF_QUESIONS)
 print(f"Your Personality is {store_personality}")
+print(LIST_OF_PERSONALITIES[store_personality])
+
